@@ -1,0 +1,130 @@
+/*Section focusing on changes applied to all elements of a type*/
+body {
+  font-family: monospace;
+  font-size: large;
+  color: #fefbd8;
+  background-color: #36486b;
+  padding: 0px;
+  margin: 0px;
+}
+
+h2 {
+  text-decoration: underline #fefbd8;
+  margin-left: 5px;
+  margin-top: 0px;
+}
+
+p {
+  margin-left: 5px;
+}
+
+img {
+  width: calc(100%);
+  height: 300px;
+  border: 2px double black;
+}
+
+/*This section is dedicated to the grid layout*/
+#container {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-rows: 100px 100px 100px 180px auto;
+  grid-template-areas:
+    'image image name name name'
+    'image image image profileInfo profileInfo'
+    'image image image physical physical'
+    'personality personality personality personality personality'
+    'skills skills skills skills skills'
+    'contact contact contact contact contact';
+  border: 2px double black;
+}
+
+/*Specific styling choices for individual sections of the grid*/
+.image {
+  grid-area: image;
+  grid-column: 1/3;
+  grid-row: 1/4;
+}
+
+.name {
+  grid-area: name;
+  grid-column: 3/6;
+  grid-row: 1/2;
+  margin-bottom: 10px;
+  margin-left: 5px;
+  border: 2px double black;
+}
+
+.profileInfo {
+  grid-area: profileInfo;
+  grid-column: 3/6;
+  grid-row: 2/3;
+  border: 2px double black;
+  margin-left: 5px;
+  margin-bottom: 10px;
+}
+
+.physical {
+  grid-area: physcial;
+  grid-column: 3/6;
+  grid-row: 3/4;
+  border: 2px double black;
+  margin-left: 5px;
+}
+
+.personality {
+  grid-area: personality;
+  grid-column: 1/6;
+  grid-row: 4/5;
+  border: 2px double black;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.skills {
+  grid-area: skills;
+  grid-column: 1/6;
+  grid-row: 5/6;
+  border: 2px double black;
+  font-size: x-large;
+}
+
+/*Dedicated to individual element styling*/
+#name {
+  font-size: xx-large;
+  margin-top: 0px;
+}
+
+.physicalList {
+  transform: translate(0, -25px);
+}
+
+#physicalLeft {
+  float: left;
+}
+
+#physicalRight {
+  float: right;
+}
+
+#physicalTitle {
+  text-align: center;
+}
+
+.margin {
+  width: 30px;
+  height: 100vh;
+  background-color: #618685;
+}
+
+#right {
+  float: right;
+}
+
+#left {
+  float: left;
+}
+
+#contactInfo {
+  font-size: larger;
+}
